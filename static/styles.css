@@ -1,0 +1,38 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.maxvh80{
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.mw-100{
+    min-width: 100%;
+}
+
+.vh90{
+    min-height: 90vh;
+}
+
+.vh45{
+    min-height: 45vh;
+}
+

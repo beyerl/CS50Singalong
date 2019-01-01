@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <link href="../static/styles.css" rel="stylesheet"/>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+        <!-- app's own JavaScript -->
+        <script src="../static/scripts.js"></script>
+
+        <!-- iFrame player script -->
+        <script src="https://www.youtube.com/iframe_api"></script>
+    
+        <title>Singalong: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <a class="navbar-brand" href="/">Singalong</span></a>
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off" autofocus>
+                <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+            </form>           
+        </nav>
+
+        <main class="container p-5 vh90">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div id="player" class="w-100"></div>
+                    </div>
+                    <div class="row">
+                        <div id="results" class="w-100">
+                            <h1>Search Results</h1>
+                            <ul id="result-list">
+                                <li>No results yet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="lyrics" class="w-100 mw-100 maxvh80">
+                    <h1>Lyrics</h1>
+                    {% block lyrics %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="small text-center text-muted">
+            Data provided for free by <a href="https://audd.io/">audD</a>.
+        </footer>
+
+    </body>
+
+</html>
